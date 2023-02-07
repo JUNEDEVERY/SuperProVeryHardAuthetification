@@ -1,0 +1,75 @@
+﻿<Application x:Class="WpfApp1.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfApp1"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="btnStyle" TargetType="Button">
+            <Style.Setters>
+                <Setter Property="Background" Value="#85a060"></Setter>
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="Width" Value="150"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="Height" Value="20"/>
+            </Style.Setters>
+            <Style.Triggers>
+                <Trigger Property="IsMouseCaptureWithin" Value="True">
+                    <Setter Property="Background" Value="#415525"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="btnStyle2" TargetType="Button">
+            <Style.Setters>
+                <Setter Property="Background" Value="#85a060"></Setter>
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="Width" Value="220"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="Height" Value="20"/>
+            </Style.Setters>
+            <Style.Triggers>
+                <Trigger Property="IsMouseCaptureWithin" Value="True">
+                    <Setter Property="Background" Value="#415525"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <ControlTemplate x:Key="btnBorder" TargetType="Button" >
+            <Border CornerRadius="5" BorderBrush="Black" BorderThickness="1" Background="{TemplateBinding Background}" >
+                <ContentControl Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            </Border>
+        </ControlTemplate>
+        <Style x:Key="tbStyle" TargetType="TextBlock">
+
+            <Style.Setters>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontFamily" Value="Courier New"/>
+            </Style.Setters>
+
+        </Style>
+        <Style x:Key="gpStyle" TargetType="GroupBox">
+
+            <Style.Setters>
+                <Setter Property="Margin" Value="5"/>
+                
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontFamily" Value="Courier New"/>
+            </Style.Setters>
+
+        </Style>
+
+
+
+
+        <Style x:Key="windowMain" TargetType="Window">
+
+            <Style.Setters>
+                <Setter Property="Background" Value="#a1af8e"/>
+
+               
+            </Style.Setters>
+
+        </Style>
+    </Application.Resources>
+</Application>

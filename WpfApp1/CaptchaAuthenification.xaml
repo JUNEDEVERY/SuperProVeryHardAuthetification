@@ -1,0 +1,40 @@
+﻿<Window x:Class="WpfApp1.CaptchaAuthenification"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Style="{StaticResource ResourceKey=windowMain}"
+        Title="CaptchaAuthenification" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Margin="0 10 0 0">
+
+            <Canvas Name="canvas" Width="380" Height="190" Background="#a1af8e">
+
+                </Canvas>
+          
+        </StackPanel>
+        <StackPanel Grid.Row="0">
+            <TextBlock  Style="{StaticResource ResourceKey=tbStyle}" HorizontalAlignment="Center"  Margin="0 15 0 0"  FontWeight="ExtraLight" Text="Пройдите аутентификацию повторно, PLS!"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" Orientation="Horizontal">
+            <GroupBox Style="{StaticResource ResourceKey=gpStyle}"  Header="Сюда вводи код с капчи" >
+                <TextBox Name="tbCaptcha" Height="30"></TextBox>
+            </GroupBox>
+        </StackPanel>
+        <StackPanel Grid.Row="3" HorizontalAlignment="Center" Orientation="Horizontal" >
+            <Button Margin="0 0 15 0" Template="{StaticResource btnBorder}"  Style="{StaticResource ResourceKey=btnStyle}" Name="btnBack" Click="btnBack_Click" Content="Назад"/>
+            <Button Margin="0 0 15 0" Template="{StaticResource btnBorder}"  Style="{StaticResource ResourceKey=btnStyle}" Name="btnGo" Click="btnGo_Click" Content="Подтвердить"/>
+            <Button Template="{StaticResource btnBorder}"  Style="{StaticResource ResourceKey=btnStyle}" Name="btnNewCode" Click="btnNewCode_Click"  Content="Новый код"/>
+   
+        </StackPanel>
+    </Grid>
+</Window>
