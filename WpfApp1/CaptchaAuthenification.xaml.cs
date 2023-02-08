@@ -200,7 +200,7 @@ namespace WpfApp1
            
             else
             {
-                MessageBox.Show("ты даун");
+                MessageBox.Show("Не верно!");
                 tbCaptcha.Text = "";
                 generateCaptcha();
             }
